@@ -3,4 +3,10 @@
     <string name="pro_workout">Pro Workout</string>
     <string name="improve_yourself_in_30_days">Improve yourself in 30 days</string>
     <string name="get_started">Get Started</string>
+    <string name="choose_your_plan">Choose your plan</string>
+    <string name="full_body">Full Body</string>
+    <string name="todo">TODO</string>
+    <string name="this_program_is_for_people_who_want_to_train_3_times_per_week">This program is for people who want to train 3 times per week.</string>
+    <string name="upper_lower">Upper/Lower</string>
+    <string name="this_program_is_for_people_who_want_to_train_5_times_per_week">This program is for people who want to train 5 times per week.</string>
 </resources>

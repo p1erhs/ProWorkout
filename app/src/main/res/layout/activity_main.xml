@@ -44,6 +44,7 @@
         android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="handleStart"
         android:text="@string/get_started"
         android:textColor="@color/white"
         app:backgroundTint="@null"
