@@ -4,9 +4,11 @@
     <string name="improve_yourself_in_30_days">Improve yourself in 30 days</string>
     <string name="get_started">Get Started</string>
     <string name="choose_your_plan">Choose your plan</string>
-    <string name="full_body">Full Body</string>
+    <string name="full_body">Full Body Program (3 days/week)</string>
     <string name="todo">TODO</string>
     <string name="this_program_is_for_people_who_want_to_train_3_times_per_week">This program is for people who want to train 3 times per week.</string>
-    <string name="upper_lower">Upper/Lower</string>
-    <string name="this_program_is_for_people_who_want_to_train_5_times_per_week">This program is for people who want to train 5 times per week.</string>
+    <string name="upper_lower">Upper/Lower Program (4 days/week)</string>
+    <string name="this_program_is_for_people_who_want_to_train_4_times_per_week">This program is for people who want to train 4 times per week.</string>
+    <string name="this_program_is_for_people_who_want_to_train_6_times_per_week">This program is for people who want to train 6 times per week.</string>
+    <string name="push_pull_legs">Push/Pull/Legs Program (6 days/week)</string>
 </resources>
