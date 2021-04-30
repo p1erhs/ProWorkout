@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0034EE"
+    android:background="#004FEE"
     tools:context=".ChoosePlan">
 
     <TextView
@@ -23,15 +23,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="handleCard1"
             app:cardBackgroundColor="#C9FF0000"
             app:cardCornerRadius="18dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+
 
                 <TextView
                     android:id="@+id/txtFullBody"
@@ -54,8 +52,6 @@
 
 
 
-            </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -63,16 +59,11 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="handleCard2"
             app:cardBackgroundColor="#CEFF8C00"
             app:cardCornerRadius="18dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
             <TextView
                 android:id="@+id/txtUL"
                 android:layout_width="match_parent"
@@ -90,7 +81,6 @@
                 android:layout_gravity="center"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/deadlift" />
-        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -99,15 +89,11 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="handleCard3"
             app:cardBackgroundColor="@color/teal_700"
             app:cardCornerRadius="18dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
                 <TextView
                     android:id="@+id/txtPPL"
                     android:layout_width="match_parent"
@@ -125,7 +111,7 @@
                     android:contentDescription="@string/todo"
                     app:srcCompat="@drawable/bench" />
 
-            </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
 

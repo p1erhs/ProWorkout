@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProWorkout">
-        <activity android:name=".ChoosePlan"></activity>
+        <activity android:name=".FullBodyActivity"></activity>
+        <activity android:name=".RecyclerAdapter" />
+        <activity android:name=".Card_layout" />
+        <activity android:name=".ChoosePlan" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

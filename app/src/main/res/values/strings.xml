@@ -11,4 +11,7 @@
     <string name="this_program_is_for_people_who_want_to_train_4_times_per_week">This program is for people who want to train 4 times per week.</string>
     <string name="this_program_is_for_people_who_want_to_train_6_times_per_week">This program is for people who want to train 6 times per week.</string>
     <string name="push_pull_legs">Push/Pull/Legs Program (6 days/week)</string>
+    <string name="item_title">Item_title</string>
+    <string name="item_detail">Item_detail</string>
+    <string name="item_image_description">Item_image_description</string>
 </resources>
