@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void handleStart(View view){
-        Intent intent= new Intent(MainActivity.this,ChoosePlan.class);
+        Intent intent= new Intent(MainActivity.this,MainMenu.class);
         startActivity(intent);
     }
 }

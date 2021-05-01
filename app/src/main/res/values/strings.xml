@@ -14,4 +14,20 @@
     <string name="item_title">Item_title</string>
     <string name="item_detail">Item_detail</string>
     <string name="item_image_description">Item_image_description</string>
+    <string name="goals">goals</string>
+    <string name="tab_text_1">Goals</string>
+    <string name="tab_text_2">Plan</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="choose_your_goals">Choose your goals</string>
+    <string name="current_weight">Current weight(kg)</string>
+    <string name="calorie_intake">Calorie Intake</string>
+    <string name="target_weight">Target weight(kg)</string>
+    <string name="age">Age</string>
+    <string name="height_cm">Height(cm)</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="plan_1">Plan 1</string>
+    <string name="plan_2">Plan 2</string>
+    <string name="plan_3">Plan 3</string>
+    <string name="update">Update</string>
 </resources>
