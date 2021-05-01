@@ -8,8 +8,8 @@ import android.view.View;
 
 public class ChoosePlan extends AppCompatActivity {
     Intent intent;
-    String[] titles = new String[20];
-    String[] details = new String[20];
+    String[] titles = new String[25];
+    String[] details = new String[25];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
