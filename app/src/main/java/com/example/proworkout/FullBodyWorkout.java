@@ -3,28 +3,31 @@ package com.example.proworkout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.os.Bundle;
 
-public class Card_layout extends AppCompatActivity{
+import android.os.Bundle;
+import android.view.View;
+
+public class FullBodyWorkout extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter recyclerAdapter;
     String[] titles;
-    String plan;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.workouts);
 
-        titles = getIntent().getStringArrayExtra("titles");
-        plan = getIntent().getStringExtra("plan");
-
+        titles = getIntent().getStringArrayExtra("a");
         recyclerView = findViewById(R.id.recycler_view);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        recyclerAdapter = new RecyclerAdapter(titles,plan);
+        recyclerAdapter = new FbRecyclerAdapter(titles);
         recyclerView.setAdapter(recyclerAdapter);
     }
+
+
 }
