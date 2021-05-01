@@ -17,23 +17,22 @@ public class Card_layout extends AppCompatActivity{
     RecyclerView.Adapter recyclerAdapter;
 
     String[] titles = new String[20];
+    String[] details = new String[20];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.workouts);
 
         titles = getIntent().getStringArrayExtra("Title");
+        details = getIntent().getStringArrayExtra("Detail");
+
 
         recyclerView = findViewById(R.id.recycler_view);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        recyclerAdapter = new RecyclerAdapter(titles);
+        recyclerAdapter = new RecyclerAdapter(titles,details);
         recyclerView.setAdapter(recyclerAdapter);
-    }
-    public String[] getTitles(){
-        return titles;
-
     }
 }

@@ -9,22 +9,30 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    String[] titles;
+    private String[] titles;
+    private String[] details;
+    private int img = R.drawable.dumbell;
 
-    public RecyclerAdapter(String[] titles){
+    public RecyclerAdapter(String[] titles,String[] details){
         this.titles = titles;
+        this.details = details;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView itemTitle;
+        TextView itemDetail;
+        ImageView itemImage;
         public ViewHolder(View itemView) {
             super(itemView);
             itemTitle = itemView.findViewById(R.id.item_title);
+            itemDetail = itemView.findViewById(R.id.item_detail);
+            itemImage = itemView.findViewById(R.id.item_image);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     int position = getAdapterPosition();
@@ -49,6 +57,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
         holder.itemTitle.setText(titles[position]);
+        holder.itemDetail.setText(details[position]);
+        holder.itemImage.setImageResource(img);
     }
 
     @Override

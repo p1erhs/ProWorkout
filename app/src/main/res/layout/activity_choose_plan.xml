@@ -29,27 +29,29 @@
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/txtFullBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/full_body"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/txtFullBody"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/full_body"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/img_Full"
-                    android:layout_width="200dp"
-                    android:layout_height="120dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/squat_grande" />
-
-
+            <ImageView
+                android:id="@+id/img_Full"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/squat_grande" />
+        </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
@@ -64,23 +66,30 @@
             app:cardCornerRadius="18dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <TextView
-                android:id="@+id/txtUL"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/upper_lower"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+                    android:id="@+id/txtUL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/upper_lower"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
 
             <ImageView
-                android:id="@+id/img_UL"
-                android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/todo"
-                app:srcCompat="@drawable/deadlift" />
+                    android:id="@+id/img_UL"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/deadlift" />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -94,23 +103,29 @@
             app:cardCornerRadius="18dp"
             app:cardElevation="12dp"
             app:cardUseCompatPadding="true">
-                <TextView
-                    android:id="@+id/txtPPL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/push_pull_legs"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="24sp"/>
 
-                <ImageView
-                    android:id="@+id/img_PPL"
-                    android:layout_width="198dp"
-                    android:layout_height="120dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/bench" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/txtPPL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/push_pull_legs"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/img_PPL"
+                android:layout_width="198dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/bench" />
+        </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
