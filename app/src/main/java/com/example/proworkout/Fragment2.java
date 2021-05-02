@@ -18,8 +18,7 @@ public class Fragment2 extends Fragment {
     CardView card3;
     Activity context;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         context = getActivity();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_2, container, false);
