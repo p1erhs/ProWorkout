@@ -19,7 +19,7 @@
         android:textColor="#000000"
         android:textSize="34sp" />
     <androidx.cardview.widget.CardView
-            android:id="@+id/cardFullBody"
+            android:id="@+id/cardFullBodycp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -57,7 +57,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/cardUL"
+            android:id="@+id/cardULcp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -94,7 +94,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/cardPPL"
+            android:id="@+id/cardPPLcp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
