@@ -17,6 +17,9 @@ public class Weight {
         this._weight=weight;
         this.date=date;
     }
+    public Weight(int weight){
+        this._weight=weight;
+    }
 
     public void setId(int _id) {
         this._id = _id;
@@ -30,7 +33,7 @@ public class Weight {
     public int getWeight() {
         return _weight;
     }
-    public void setDate(String date) {
+    public void setDate() {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
         String formattedDate = df.format(c);
