@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProWorkout">
-        <activity android:name=".FullBodyWorkout"></activity>
+        <activity android:name=".ui.main.ProgressList"></activity>
+        <activity android:name=".FullBodyWorkout" />
         <activity android:name=".Card_layout" />
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
-            android:theme="@style/Theme.ProWorkout.NoActionBar"/>
+            android:theme="@style/Theme.ProWorkout.NoActionBar" />
         <activity android:name=".ChoosePlan" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -17,6 +17,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.proworkout.ui.main.ProgressList;
+
 import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
@@ -46,8 +48,6 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         context = getActivity();
-
-
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_1, container, false);
@@ -119,7 +119,7 @@ public class Fragment1 extends Fragment {
         progress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(context,MainMenu.class);
+                Intent intent= new Intent(context, ProgressList.class);
                 startActivity(intent);
             }
         });

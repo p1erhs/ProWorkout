@@ -60,4 +60,10 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
         return weight;
     }
+    public Cursor viewData(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_WEIGHT;
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor;
+    }
 }
