@@ -30,7 +30,7 @@
             android:layout_marginStart="8dp"
             android:text="@string/item_title"
             android:gravity="center_vertical"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="@color/red_bull_blue"
             card_view:layout_constraintStart_toEndOf="@+id/item_image"
             card_view:layout_constraintTop_toTopOf="parent" />
