@@ -23,6 +23,7 @@ public class Fragment2 extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_2, container, false);
     }
+    //This activity's onStart method takes the user to the desired workout plan depending on which of the 3 cards he/she tapped on
     public void onStart(){
         super.onStart();
         card1 = context.findViewById(R.id.cardFullBody);

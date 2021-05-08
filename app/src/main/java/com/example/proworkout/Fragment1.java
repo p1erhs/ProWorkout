@@ -42,7 +42,6 @@ public class Fragment1 extends Fragment {
     int rg1,rg2, cal;
     TextView calories;
     EditText currW;
-
     MyDBHandler db;
     ArrayList<String> listItem;
     ArrayAdapter adapter;
@@ -55,6 +54,7 @@ public class Fragment1 extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_1, container, false);
     }
+    //onStart method sets up the ids from the elements it contains and has methods that tell its buttons what to do
     public void onStart(){
         super.onStart();
 
@@ -70,16 +70,29 @@ public class Fragment1 extends Fragment {
         calories = context.findViewById(R.id.Calories);
         btn_cw = context.findViewById(R.id.update);
         currW = context.findViewById(R.id.currentWeight);
-
-
-//        db = new MyDBHandler(context, null, null,1);
-//
-//        listItem = new ArrayList<>();
-//        list = context.findViewById(R.id.weight_list);
-//
-//        showData();
-
         progress = context.findViewById(R.id.Progress);
+
+        //this onClickListener takes the input the user set in the edittext which is the weight and adds a new weight object to the database
+        btn_cw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDBHandler dbhandler = new MyDBHandler(context,null,null, 1);
+                String theWeight = currW.getText().toString();
+                int w = Integer.parseInt(theWeight);
+                Weight weight = new Weight(w);
+                dbhandler.addWeight(weight);
+                currW.setText("");
+            }
+        });
+        //this onClickListener takes the user to an activity that shows his/hers progress
+        progress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(context, ProgressList.class);
+                startActivity(intent);
+            }
+        });
+        //this onClickListener tells the user his/hers basic metabolic rate after calling calculate() method
         btn_cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,34 +123,9 @@ public class Fragment1 extends Fragment {
                 }
             }
         });
-        btn_cw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MyDBHandler dbhandler = new MyDBHandler(context,null,null, 1);
-                String theWeight = currW.getText().toString();
-                int w = Integer.parseInt(theWeight);
-
-                Date c = Calendar.getInstance().getTime();
-                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
-                String formattedDate = df.format(c);
-                String date = formattedDate;
-
-                Weight weight = new Weight(w);
-                weight.setDate();
-                dbhandler.addWeight(weight);
-                currW.setText("");
-
-            }
-        });
-        progress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(context, ProgressList.class);
-                startActivity(intent);
-            }
-        });
     }
 
+    //method to calculate BMR
     public int calculate(int w, int h, int a, int rg1, int rg2){
         int calories = 0;
         float cals;
@@ -167,17 +155,4 @@ public class Fragment1 extends Fragment {
         return calories;
     }
 
-    public void showData(){
-        Cursor cursor= db.viewData();
-        if (cursor.getCount() == 0){
-            Toast.makeText(context,"No progress to show", Toast.LENGTH_LONG).show();
-        }
-        else{
-            while (cursor.moveToNext()){
-            }
-
-            adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1, listItem);
-            list.setAdapter(adapter);
-        }
-    }
 }

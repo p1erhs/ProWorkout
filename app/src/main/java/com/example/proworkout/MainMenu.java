@@ -1,5 +1,7 @@
 package com.example.proworkout;
-
+/*
+This class is the Tabbed activity that holds the 2 fragments "goals" and "plan"
+ */
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

@@ -15,7 +15,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_WEIGHT = "_weight";
     public static final String COLUMN_DATE = "_date";
 
-    //Constructor
     public MyDBHandler (Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
@@ -42,29 +41,12 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_WEIGHT, null, values);
         db.close();
     }
+    //this method returns all of the data from the database in a cursor object
     public Cursor viewData(){
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM " + TABLE_WEIGHT;
         Cursor cursor = db.rawQuery(query,null);
         return cursor;
     }
-//    public Weight findWeight(String date){
-//        String query = "SELECT * FROM " + TABLE_WEIGHT + " WHERE " + COLUMN_DATE  + " = '" + date + "'";
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        Cursor cursor = db.rawQuery(query,null);
-//        Weight weight = new Weight();
-//        if (cursor.moveToFirst()){
-//            cursor.moveToFirst();
-//            weight.setId(Integer.parseInt(cursor.getString(0)));
-//            weight.setWeight(Integer.parseInt(cursor.getString(1)));
-//            weight.setDate();
-//            cursor.close();
-//        }
-//        else{
-//            weight = null;
-//        }
-//        db.close();
-//        return weight;
-//    }
 
 }

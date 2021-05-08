@@ -14,10 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     * Αυτή η μέθοδος μετακινεί τον χρήστη σε άλλο activity όταν πατάει το button.
-     * @param view
-     */
     public void handleStart(View view){
         Intent intent= new Intent(MainActivity.this,MainMenu.class);
         startActivity(intent);

@@ -28,7 +28,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 @Override public void onClick(View v) {
                     int position = getAdapterPosition();
                     Context context = itemView.getContext();
-
                     if(plan.equals("1")){
                         Intent intent = new Intent(context, Exercises.class);
                         String[] a;
