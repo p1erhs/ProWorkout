@@ -8,14 +8,14 @@ import java.util.Locale;
 public class Weight {
     private int _id;
     private int _weight;
-    private String date;
+    private String _date;
 
     public Weight(){
     }
     public Weight(int id, int weight, String date){
         this._id=id;
         this._weight=weight;
-        this.date=date;
+        this._date=date;
     }
     public Weight(int weight){
         this._weight=weight;
@@ -37,9 +37,9 @@ public class Weight {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
         String formattedDate = df.format(c);
-        this.date = formattedDate;
+        this._date = formattedDate;
     }
     public String getDate() {
-        return date;
+        return _date;
     }
 }

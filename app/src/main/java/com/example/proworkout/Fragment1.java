@@ -2,48 +2,51 @@ package com.example.proworkout;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-
-import com.example.proworkout.ui.main.ProgressList;
-
-import org.w3c.dom.Text;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 public class Fragment1 extends Fragment {
 
-    private int x;
+    int x;
     Activity context;
-    private Button btn_cw;
-    private Button btn_cal;
-    private Button progress;
-    private EditText age;
-    private EditText height;
-    private EditText weight;
-    private RadioButton male;
-    private RadioButton female;
-    private RadioButton plan1;
-    private RadioButton plan2;
-    private RadioButton plan3;
-    private int rg1,rg2, cal;
-    private TextView calories;
-    private EditText currW;
+    Button btn_cw;
+    Button btn_cal;
+    Button progress;
+    EditText age;
+    EditText height;
+    EditText weight;
+    RadioButton male;
+    RadioButton female;
+    RadioButton plan1;
+    RadioButton plan2;
+    RadioButton plan3;
+    int rg1,rg2, cal;
+    TextView calories;
+    EditText currW;
+
+    MyDBHandler db;
+    ArrayList<String> listItem;
+    ArrayAdapter adapter;
+    ListView list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +70,15 @@ public class Fragment1 extends Fragment {
         calories = context.findViewById(R.id.Calories);
         btn_cw = context.findViewById(R.id.update);
         currW = context.findViewById(R.id.currentWeight);
+
+
+//        db = new MyDBHandler(context, null, null,1);
+//
+//        listItem = new ArrayList<>();
+//        list = context.findViewById(R.id.weight_list);
+//
+//        showData();
+
         progress = context.findViewById(R.id.Progress);
         btn_cal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,16 +116,17 @@ public class Fragment1 extends Fragment {
                 MyDBHandler dbhandler = new MyDBHandler(context,null,null, 1);
                 String theWeight = currW.getText().toString();
                 int w = Integer.parseInt(theWeight);
+
                 Date c = Calendar.getInstance().getTime();
                 SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
                 String formattedDate = df.format(c);
                 String date = formattedDate;
-                Weight found = dbhandler.findWeight(date);
-                if (found == null){
-                    Weight weight = new Weight(w);
-                    weight.setDate();
-                    currW.setText("");
-                }
+
+                Weight weight = new Weight(w);
+                weight.setDate();
+                dbhandler.addWeight(weight);
+                currW.setText("");
+
             }
         });
         progress.setOnClickListener(new View.OnClickListener() {
@@ -152,5 +165,19 @@ public class Fragment1 extends Fragment {
         }
         calories=(int) Math.round(cals);;
         return calories;
+    }
+
+    public void showData(){
+        Cursor cursor= db.viewData();
+        if (cursor.getCount() == 0){
+            Toast.makeText(context,"No progress to show", Toast.LENGTH_LONG).show();
+        }
+        else{
+            while (cursor.moveToNext()){
+            }
+
+            adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1, listItem);
+            list.setAdapter(adapter);
+        }
     }
 }

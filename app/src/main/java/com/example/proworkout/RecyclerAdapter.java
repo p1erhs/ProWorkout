@@ -20,12 +20,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private String[] titles;
     private String plan;
     private FullBodyWorkout fullBodyWorkout;
-    public RecyclerAdapter (String[] titles,String plan)
-    { this.titles = titles;
-      this.plan = plan;}
 
-
-
+    public RecyclerAdapter (String[] titles,String plan) {
+        this.titles = titles;
+        this.plan = plan;
+    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView itemTitle;
