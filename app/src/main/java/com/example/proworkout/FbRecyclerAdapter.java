@@ -12,10 +12,17 @@ import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 
+/**
+ * Basic recycler adapter implementation that displays list of days of each workout plan is choosed.
+ */
 public class FbRecyclerAdapter extends RecyclerView.Adapter<FbRecyclerAdapter.ViewHolder> {
     private String[] titles;
     private int img = R.drawable.dumbell;
 
+    /**
+     * Constructor
+     * @param titles
+     */
     public FbRecyclerAdapter(String[] titles){
         this.titles = titles;
     }

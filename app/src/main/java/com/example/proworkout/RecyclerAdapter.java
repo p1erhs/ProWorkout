@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+/**
+ *Recycler adapter implementation that is used to fill up the content of plans depending of which plan user chooses.
+ */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    private String[] titles;
+    private String[] titles; //name of each exercise
     private String plan;
     private Exercises exercises;
 

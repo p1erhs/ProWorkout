@@ -41,13 +41,14 @@
                 android:text="@string/full_body"
                 android:textAlignment="center"
                 android:textColor="@color/red_bull_blue"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/img_Full"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/squat_grande" />
 
@@ -81,13 +82,14 @@
                 android:text="@string/upper_lower"
                 android:textAlignment="center"
                 android:textColor="@color/red_bull_blue"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/img_UL"
                 android:layout_width="200dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/deadlift" />
         </LinearLayout>
@@ -115,13 +117,14 @@
                 android:text="@string/push_pull_legs"
                 android:textAlignment="center"
                 android:textColor="@color/red_bull_blue"
-                android:textSize="24sp"/>
+                android:textSize="20sp"/>
 
             <ImageView
                 android:id="@+id/img_PPL"
                 android:layout_width="198dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/bench" />
 
