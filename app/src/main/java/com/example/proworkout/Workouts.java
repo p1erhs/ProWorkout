@@ -9,7 +9,7 @@ import android.os.Bundle;
 /**
  * Recycler view for workout plans.
  */
-public class Exercises extends AppCompatActivity {
+public class Workouts extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter recyclerAdapter;

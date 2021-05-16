@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     private String[] titles; //name of each exercise
     private String plan;
-    private Exercises exercises;
+    private Workouts workouts;
 
     public RecyclerAdapter (String[] titles,String plan) {
         this.titles = titles;
@@ -32,7 +32,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     int position = getAdapterPosition();
                     Context context = itemView.getContext();
                     if(plan.equals("1")){
-                        Intent intent = new Intent(context, Exercises.class);
+                        Intent intent = new Intent(context, Workouts.class);
                         String[] a;
                         switch (position){
                             case 0:
@@ -72,7 +72,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         }
                     }
                     if(plan.equals("2")){
-                        Intent intent = new Intent(context, Exercises.class);
+                        Intent intent = new Intent(context, Workouts.class);
                         String[] a;
                         switch (position){
                             case 0:
@@ -127,7 +127,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         }
                     }
                     if(plan.equals("3")){
-                        Intent intent = new Intent(context, Exercises.class);
+                        Intent intent = new Intent(context, Workouts.class);
                         String[] a;
                         switch (position){
                             case 0:

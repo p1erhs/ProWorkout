@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProWorkout">
         <activity android:name=".ProgressList"/>
-        <activity android:name=".Exercises" />
+        <activity android:name=".Workouts" />
         <activity android:name=".Card_layout" />
         <activity
             android:name=".MainMenu"
